@@ -1,9 +1,6 @@
 DROP DATABASE IF EXISTS company_db;
 CREATE DATABASE company_db;
-
-
 USE company_db;
-
 
 CREATE TABLE _department (
    _id INT NOT NULL,
@@ -34,6 +31,6 @@ CREATE TABLE _employee (
    ON DELETE SET NULL,
    FOREIGN KEY (_manager_id)
    REFERENCES _employee(_id)
-   ON DELETE SET NULL,
+   ON DELETE SET NULL
 );
 

@@ -33,7 +33,7 @@ INSERT INTO _employee (_id,_first_name,_last_name,_role_id,_manager_id)
 VALUES (1, "Harrison","Bergeron",15,NULL),
        (2, "Ahmed","Johnson",16,1),
        (3, "Arthur","King",17,1),
-       (4, "Margaret","Thatcher",1,2)
+       (4, "Margaret","Thatcher",1,2),
        (5, "Martin","Amis",1,4),
        (6, "Christopher","Hitchens",2,4),
        (7, "Guy","Debord",3,6),
