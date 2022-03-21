@@ -5,16 +5,19 @@ const db = require('../db/db.js')
 
 function Queries(){}
 
-Queries.prototype.salaries=()=>{
+Queries.prototype.salaries= () =>{
     db.query('SELECT CONCAT(_employee._last_name,", ",_employee._first_name) as Name,_role._salary as Salary FROM _employee  JOIN _role ON _employee._role_id =_role._id ORDER BY _employee._last_name;', function (err, res) {
       console.table(res);
     });
 }
 
-Queries.prototype.departments=()=>{
+Queries.prototype.departments= ()=>{
     db.query('SELECT _name as Department, _id as ID  FROM _department;', function (err, res) {
         console.table(res);
-      });
+        console.log("fuck");
+    });
+    
+
     
 }
 /*
