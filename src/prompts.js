@@ -3,7 +3,7 @@ require('console.table');
 const db = require('../db/db.js')
 
 
-const menu=["view all departments", "view all roles", "view all employees", "add a department", "add a role", "add an employee", "update an employee role", "update an employee manager", "view employees by manager"];
+const menu=["view all departments", "view all roles", "view all employees", "add a department", "add a role", "add an employee", "update an employee role", "update an employee manager"];//, "view employees by manager"];
 
 function Prompts(){}
 
@@ -227,6 +227,8 @@ Prompts.prototype.updateEmployeeRole=()=>{//select an employee to update their r
     
             ]).then(({name,title})=>{
 
+                 
+
                 
     
                 //get index of selected employee 
@@ -308,7 +310,7 @@ Prompts.prototype.updateEmployeeManager=()=>{//select an employee to update empl
 }
 
 
-
+/*
 Prompts.prototype.viewEmployeesByManager=()=>{//select a manager to view all their employees
     const empls2 = [];
 
@@ -365,17 +367,23 @@ Prompts.prototype.viewEmployeesByManager=()=>{//select a manager to view all the
          
     })
 }
+*/
 
+
+/*
+
+TO DO:
+
+* View employees by manager.
+
+* View employees by department.
+
+* Delete departments, roles, and employees.
+
+* View the total utilized budget of a department&mdash;in other words, the combined salaries of all employees in that department.
+ 
+!!!replace array index choice with where query, then can add deletions
+
+*/
 
 module.exports = Prompts;
-
-/*BONUSES:
-
-* Application allows users to view employees by manager (2 points).
-
-* Application allows users to view employees by department (2 points).
-
-* Application allows users to delete departments, roles, and employees (2 points for each).
-
-* Application allows users to view the total utilized budget of a department&mdash;in other words, the combined salaries of all employees in that department (8 points).
-*/
